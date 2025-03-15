@@ -46,25 +46,30 @@ body::before {
   color: black;
 }
 
+.header-position {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 61px;
+}
+
+
 h1 {
-  display: flex;
   font-family: Raleway, Arial, sans-serif;
   font-size: 116px;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 136px;
   letter-spacing: 4.3px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 61px;
+
 }
 
-h1::after {
+.header-position::after {
   content: "*";
   overflow-wrap: break-word;
 }
 
-h1:hover {
+.header-position:hover {
   color: #4c4c4c;
   transition: opacity 0.3s ease-in-out;
 }
