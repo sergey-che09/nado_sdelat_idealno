@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  min-width: 800px;
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  place-items: center;
+  box-sizing: border-box;
+  max-width: 750px;
+  width: 100%;
+  z-index: 1;
+  justify-content: center;
+}
+
+.header-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  color: black;
+}
+
+.header-position {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 61px;
+}
+
+
+h1 {
+  font-family: Raleway, Arial, sans-serif;
+  font-size: 116px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 136px;
+  letter-spacing: 4.3px;
+
+}
+
+.header-position::after {
+  content: "*";
+  overflow-wrap: break-word;
+}
+
+.header-position:hover {
+  color: #4c4c4c;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip::after {
+  content: "На самом деле нет. \AВажнее &mdash; научиться ошибаться.";
+  white-space: pre;
+  position: fixed;
+  top: 20%;
+  right: 1.5%;
+  width: max-content;
+  padding: 36px 44px;
+  background: white;
+  border: 2px solid #000000;
+  box-shadow: 0 15px 0 black;
+  color: black;
+  font-family: Raleway, Arial, sans-serif;
+  line-height: 35px;
+  font-size: 35px;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
