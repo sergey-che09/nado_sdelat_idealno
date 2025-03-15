@@ -33,7 +33,8 @@ body::before {
   display: flex;
   place-items: center;
   box-sizing: border-box;
-  width: 750px;
+  max-width: 750px;
+  width: 100%;
   z-index: 1;
   justify-content: center;
 }
